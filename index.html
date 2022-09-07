@@ -375,6 +375,65 @@ It prints out the path to where you currently are.
 </h3>
  </ul>
 </h2>
+Now there is a hidden file/folder that is created when we use git init,
+for example if we type 'ls -a' inside our current directory it shows 
+the following: ./ , ../ , .git/ , index.html , style.css, script.js
+<h2> We can even cd into the .git folder and it will
+   show things like: 'HEAD', 'config', 'description', 'hooks', 'refs',
+   'info', 'objects', we can also delete the .git folder but beware, this
+   deletes the repo entirely, rm -rf .git, the .git folder is where
+   everything is stored, that's why it's a hidden folder, so you don't
+   accidentally delete or mess with it.
+</h2>
+<h1><u>Common early git mistakes</u></h1>
+<h2>
+   So it's important to understand when we initialize a git 
+   repo, anything nested inside the directory that we intialize with
+   'git init' is tracked, so you could have folders inside of directories,
+   inside of directories inside of more directories, all that is tracked
+   if we use 'git init' in the parent directory, it tracks every file change
+   all the way down.
+</h2>
+<h1><em><u>WARNING! DO NOT INIT A REPO INSIDE OF A REPO,
+   BEFORE RUNNING GIT INIT, USE GIT STATUS TO VERIFY
+   THAT YOU'RE NOT CURRENTLY INSIDE A REPO
+</u></em></h1>
+<h2>We want to keep our repo's separate, because it can cause
+   problems later on, avoid this. Just make sure to always use
+'git status' to double check </h2>
+<h1><u>The committing workflow overview</u></h1>
+<h2>
+   What is committing? Committing is using checkpoints or  like saves
+   in a video game, you add a nav bar then commit, then change something,
+   else and commit that change, on and on. Like in a game you can make 
+   a save early on, then revisit that early save after some time so see
+   a previous version of your character. We can undo commits, revisit early
+   commits, merge commits.
+</h2>
+<h1><u>Git add/commit command</u></h1>
+<h2>
+   This is the first command we use when we want to make a commit,
+   the workflow is usually like:
+   <ol>
+       <li>Work on stuff, make new files, edit or delete files</li>
+       <li>Add the changes with 'git add', where we group
+           specific changes together in preparation of committing,
+           now the files we specify to add are now in the staging area
+       </li>
+       <li>Commit the changes with 'git commmit', Commit
+           everything that we just added with 'git add', now the files
+           that are in the staging area are commited, usually followed by 
+           a commmit message 'git commit -m  "message here"', the message should
+           summarize the changes made concisely
+
+       </li>
+   </ol>
+</h2>
+<h2>To reiterate when we commit we always include: git commit -m "message here"
+   with a massage as descriptive and concise as possible
+</h2>
+<h2>test</h2>
+
 
 
 
