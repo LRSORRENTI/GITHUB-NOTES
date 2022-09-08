@@ -444,7 +444,29 @@ the following: ./ , ../ , .git/ , index.html , style.css, script.js
     git add .
 </h2>
 
+<h1>Git committing exercise</h1>
+<h2>Okay so I just finished the git commit exercise
+    and ran into a problem, there was an error being thrown 
+    when I was trying to use (git add groceries.txt and yard.txt)
+    after googling the error I found the fix to the problem 
+    on stack overflow, to fix the error message: 
+</h2>
+<h2>
+    Another git process seems to be running in this repository, e.g.
+    an editor opened by 'git commit'. Please make sure all processes
+    are terminated then try again. If it still fails, a git process
+    may have crashed in this repository earlier:
+    remove the file manually to continue.
+</h2>
 
+<h2>We need to cd into our .git directory then use the 
+    command: (rm -f .git/index.lock) and this fixes the 
+    error message, hopefully this didn't do anything 
+    bad inside our .git directory but I suppose we'll
+    find out later? The error did not occur in colt's 
+    demonstration so I'm not sure what I did specifically
+    but after deletion it worked.  
+</h2>
 
 
 
