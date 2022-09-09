@@ -528,7 +528,46 @@ exact thing as in GitBash git add, git status, git commit -m etc.. </h2>
     you may not go back more than one commit using amend flag, 
     --amend only works on the last commit
 </h2>
-
+<h2>Okay so this --amend isn't working for me, I'm getting an 
+    error message saying:
+    <h2>unknown option: --amend
+    usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+               [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+               [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+               [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+               [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+               <command> [<args>]
+               </h2>
+               <h2>
+               Will come back to this later to see what I'm doing wrong
+               
+            </h2>
+<h1>=======================</h1>
+            <h1>Ignoring files with /.gitignore </h1>
+ <h1>=======================</h1>    
+            <h2>We can tell git which directories and files
+                to ignore in a given repository, we use .gitignore
+                This is useful for things you know you never want to Commit
+                like:
+                <ul>
+                    <li>Secrets, API keys, credentials etc..</li>
+                    <li>Operating system files</li>
+                    <li>Log files</li>
+                    <li>Dependencies & packages</li>
+                </ul>
+            </h2>
+            <h2>Typically we put .gitignore in the root of a repository
+                We tell git which files to ignore, let's practice This
+                by making a new directory called gitIgnoreDemo 
+            </h2>
+            <h2>So colt just used git ignore to ignore some json files, 
+                as well as a secrets.txt file that contains a fake API key,
+                and using git ignore he made it so those files did not 
+                show up in gitBash so they would never be accidentally 
+                added
+            </h2>
+         
+    
 
 
 
