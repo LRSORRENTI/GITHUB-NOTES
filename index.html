@@ -882,9 +882,23 @@ not master, so where you use the branch command MATTERS </h2>
     with the '-c' flag right before our branch name, so it would look 
     like this: git switch -c switch_and_changed_branch
 </h2>
+<h2> To achieve the same using git checkout the command would 
+    be: git checkout -b "branch-name-here", we use -b flag instead 
+    of -c flag 
+</h2>
 
-
-
+<h2>Keep in mind if we're on a branch that's not 
+    currently committed, and we try to switch, we'll get an error 
+    that says "please commit or stash your changes", we'll learn 
+    about stashes later but for now just know git will throw an 
+    error if you try to switch without committing. 
+</h2>
+<h2>Also if you create a new file on your new branch, and forget 
+    to commit, that file will follow you around, it won't throw 
+    that error we got above, if you create a file in switch_and_changed_branch 
+    then change to master branch, the file you created will follow 
+    you there
+</h2>
 
 
 
