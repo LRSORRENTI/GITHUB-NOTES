@@ -1043,9 +1043,52 @@ Using VsCode to resolve conflicts
         </li>
     </ul>
 </h1>
+<h2>
+    Now let's get into it, how do we merge branches, an essential 
+    thing we must learn, to do this we use the git merge command
+</h2>
+<h2>
+    This is a common part of git workflow especially when working 
+    on a team, you're going to be using git merge frequently 
+    in a developer role. 
+</h2>
+<h2>
+    So a big thing to know is that we don't ever experiment 
+    merging with master until a feature is 100% approved to 
+    merge back to master branch, you'll leave master alone 
+    until your "feature branch" or branch you're editing 
+    has been completely fleshed out and approved for a merge.
+</h2> 
+<h2>
+    So everyone at X company works on their own unique 
+    feature branch, your co-workers will have their own 
+    branches that they're editing for a specified task same 
+    as yourself, then maybe you'll merge branches at some 
+    point.
+</h2>
 
+<h2>
+    Remember we merge branches themselves, not commits, and we always merge 
+    to the current HEAD branch
+</h2>
+<h2>
+    When we want to merge, we follow these steps:
+    <ol>
+        <li>
+            Switch into the branch you'd like to merge the changes 
+            into(the receiving branch) using git switch command: git switch 
+            master
+        </li>
+   <li>
+    Use the git merge command to merge the changes from a specific branch 
+    into the current branch, which from above would be master: git merge bugfix
 
-
+   </li>
+    </ol>
+So it's essentially: git switch into the branch you want to merge changes 
+into, then once inside the selected branch, use git merge bugfix or git merge + 
+branch name we want to merge into master
+</h2>
 
 
 
