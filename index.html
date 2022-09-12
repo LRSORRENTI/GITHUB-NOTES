@@ -1253,6 +1253,26 @@ branch name we want to merge into master
      </ul>
      </h2>
 </h2>
+<h1>Why is git stashing a thing? What does it solve?</h1>
+<h2>
+    Git stash is useful when you don't want to make a full commit, 
+    but you need to go somewhere else, change branches, coworker asks 
+    for help etc.. 
+</h2>
+<h2>
+    Git provides an easy way to stash uncommitted changes so we can return 
+    to them later without having to make unnecessary commits
+</h2>
+<h2>
+    The command itself is: git stash, and this will take all uncommitted 
+    changes and stashes them. In the event we don't want to commit but 
+    we also don't want to lose anything, we use git stash, then we can 
+    move to whichever branch we need because our changes are stashed
+</h2>
+<h2>
+    Then once we want to reinstate our stashed changes we use the command 
+    git stash pop
+</h2>
 
 
 
