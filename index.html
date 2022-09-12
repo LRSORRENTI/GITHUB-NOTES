@@ -1161,8 +1161,39 @@ branch name we want to merge into master
         </li>
     </ul>
 </h2>
-
-
+<h1>
+    Intro to Git Diff
+</h1>
+<h2> We use the git diff command to view changes between 
+    branches, commmits, files, directories and more! 
+    We often use git diff alongside git status and git log, to 
+    understand and get a better picture of a repository, and 
+    how it's changed over time.
+</h2>
+<h2>Git diff is purely an informative command, it's about 
+    understanding changes, and how they have changed.
+</h2>
+<h2>What's the output of git diff and what does it mean? </h2>
+<h2>Well git diff always follows a very similar pattern,
+    it shows the changes made since the last commit, it's usually 
+    highlighted in green with a '+' or '-' sign in git bash.
+</h2>
+<h2>
+    Now lets look at git diff HEAD
+</h2>
+<h2>
+    so git diff HEAD, so we may see the same changes as git diff, but 
+    this changes when we add a file to the staging area, once we add 
+    the file with git add, when we input git diff, it'll show nothing 
+    because the file's been added to the staging area
+</h2>
+<h2>But if we input git diff HEAD it will show the changes even 
+    though our file has been added to the staging area
+</h2>
+<h2>
+    So the takeaway here is that git diff shows the staged changes, and 
+    git diff HEAD shows all changes, staged and unstaged.
+</h2>
 
 
 
