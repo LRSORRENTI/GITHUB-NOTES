@@ -1399,7 +1399,16 @@ Discarding changes with checkout
     and commit them, and discard any commits you make in this state, 
     without impacting any branches by switching back to a branch
 </h2>
-
+<h2>
+    After entering git checkout 37ed289, we now only see 4 commits, versus 
+    the 10 or so commits when we first did git log --oneline inside 
+    our repo, we traveled back in time.
+</h2>
+<h2>Head usually points to the branch reference, and the branch reference 
+    points to the most recent commit on the branch, but when we use git checkout 
+    plus a hash num, we detach the head from master, and head is now 
+    pointing to the specified commit hash num
+</h2>
 
 
 
