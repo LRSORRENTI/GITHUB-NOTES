@@ -1546,7 +1546,30 @@ I do get switched dash and it takes me back to where I left off.
     which is why git restore was introduced, similar to how git switch 
     was also added as an alternative to git checkout 
     </h2>
-
+<h2>
+    We use git restore to unmodify files, in case you changed and saved a 
+    file, but don't want those changes to stay, you can use git restore,
+    be cautioned though, after entering the git restore command, there's 
+    no going back, the uncommitted changes are permanently gone, use 
+    git restore with utmost certainty you want to discard changes made.
+</h2>
+<h2>
+    And yes git restore does work, after entering the command, 
+    all the changes I made are gone, and the file is back to the 
+    state in which I made the last commit
+</h2>
+<h2>
+    Now remember this command has the exact same result as git checkout 
+    HEAD dog.txt, it's just simpler
+</h2>
+<h2>
+    We could also go back further in our commit history with this command: 
+    git restore --source HEAD ~2 dog.txt
+</h2>
+<h2>
+    the ~2 or ~num is specifying how many commits to go back, we could go 
+    back 3 commits with ~3
+</h2>
 
 
 
