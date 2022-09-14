@@ -1510,6 +1510,32 @@ I don't remember what branch I was on or I'm just lazy.
 I do get switched dash and it takes me back to where I left off.
  That's all I wanted to show.
 </h2>
+<h1>Discarding changes with Git Checkout</h1>
+<h2>
+    Okay so colt just made a new repo, with two files: dog.txt and 
+    cat.txt, first we initialized the repo, then one by one added 3 
+    commits, all saying: first commit, second, and third, one line 
+    at a time
+</h2>
+<h2>
+    This is to demonstrate how we could use git checkout to 
+    revert changes or discard changes back to an earlier version of 
+    a file
+</h2>
+<h2>We can do this with the command: git checkout HEAD file-name</h2>
+<h2>In our example it would be: git checkout HEAD dog.txt</h2>
+<h2>We're telling git take the contents of dog.txt at HEAD,
+    and get rid of/discard the changes we made. </h2>
+    <h2>And yes it works, cat.txt and dog.txt were reverted 
+        to their original state, the changes I made are gone
+    </h2>
+    <h2>Another way to do the same thing is with the 
+        git command: git checkout -- cat.txt dog.txt
+    </h2>
+    <h2>So git checkout HEAD dog.txt and git checkout -- dog.txt 
+        do the exact same, just different ways of using the same 
+        command
+    </h2>
 
 
 
