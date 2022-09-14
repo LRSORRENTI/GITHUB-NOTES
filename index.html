@@ -1421,7 +1421,95 @@ because after creating and switching branches, our head is also
 now re-attached.
 
 </h2>
-
+<h2>
+    So we saw that we can check out a particular commit using a commit hash.
+But there's another way in get that we can reference other commits.
+We can reference things based upon head.
+</h2>
+<h2>
+The syntax is kind of it's a little weird, but it looks like this head and then a tilde, which is
+usually above the tab key and then a number.
+So head tilde one is actually going to refer to whatever commit comes before.
+Head Think of it as head minus one head.
+Tilde two it's whatever comes to commits before head the grandparent commit.
+So if this is where head is, if I check out head.
+Tilde one It's the previous commit head.
+Tilde two is this commit three is this one so I don't use this all that often, but sometimes if you
+have a reason to reference what you did in the last commit and you don't want to go look up that commit
+hash, you can still very easily reference it with head tilde one So I'll show that very quickly on
+our master branch.
+Just take a look.
+</h2>
+<h2>
+So we've got big in chapter three.
+That's where we are right now.
+If I just want to go back one commit, I could copy this.
+Right, and then check that out or I can do this.
+Get check out.
+Head.
+Tilde one not 21, just one.
+</h2>
+<h2>
+And once again, we're back to detach Head, because we checked out a particular commit.
+This is just a different way to reference that commit, right?
+We just said the previous commit, but it still commit.
+We're not on a branch and we see that here.
+Head is now pointing to this commit add headings to all files.
+So before head was pointing to master which is still pointing to this commit.
+Now head is one before and what we see in our file we probably won't notice a whole lot, but there's
+no chapter three.
+That is the difference.
+Chapter one and chapter two are here, but chapter three was the next commit.
+It still exists on Master, of course.
+</h2>
+<h2>
+So from here, if I want to go back one commit again, I can just do the same command get check out
+head minus or tilde one because head is now right here.
+I can still reference one commit prior.
+And now we go back one one further.
+So there we are.
+Head is now here.
+And we can see we don't have those headings in my files anymore. Chapter two. Chapter one.
+They used to have a heading up top, and that's kind of all I want to show.
+ I'll switch back to Master now.
+Get switch, master.
+</h2>
+<h2>
+And now we have those headings back and we have Chapter three back.
+So we're back up to date with the Master Branch reference.
+One other thing that we can do to get back to the branch we were on, so let me try and explain that
+in a better way.
+If I check out some commit, I go into detached head.
+Right now I'm on master, right?
+So if I check out head Tilde, I don't know.
+Let's go way back like eight.
+We're way back here.
+This commit here.
+Now, if I want to go back to where I was, I want to leave detached head.
+One option is to just remember what branch I was on.
+Master, and go back to Master.
+Get switch master.
+The other option is get switch with a dash and that will just take me back to whatever branch I was
+on last.
+And that happens to be master.
+But I could show a different example, right?
+We have this other branch.
+I already forgot the name.
+What is it?
+Chapter two redo.
+If we check that out or switch to it.
+Either one.
+That's where I was.
+Now I'm going to go back, get check out head.
+Let's do Tilde one.
+So I'm on this branch.
+I'm going to go back one commit.
+And now I just want to leave.
+Detached head.
+I don't remember what branch I was on or I'm just lazy.
+I do get switched dash and it takes me back to where I left off.
+ That's all I wanted to show.
+</h2>
 
 
 
