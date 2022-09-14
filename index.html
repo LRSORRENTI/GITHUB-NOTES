@@ -1587,7 +1587,23 @@ I do get switched dash and it takes me back to where I left off.
     So in case we want to undo a commit, we can use git reset git-hash-num 
     to undo them, be warned though, after entering the commits are gone
 </h2>
-<h1>reset me</h1>
+<h1>
+    Intro to git revert
+</h1>
+<h2>
+    Another similar sounding command, that also will undo changes, 
+    except git revert hashnum, will leave a trace of the deletion, 
+    when we use git reset/restore, those commits are gone without 
+    any evidence of deletion, but git revert will leave evidence 
+    of the deletion, the history is preserved.
+    </h2>
+    <h2>
+        This is useful when working on a team, using git reset 
+        causes problems when working with others, they may need to 
+        see the commit that was deleted, which is why using git 
+        revert instead is best practice
+    </h2>
+
 
 
 
