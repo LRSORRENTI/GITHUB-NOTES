@@ -1672,15 +1672,84 @@ repo from a url
     Also keep in mind we can also clone a repo from any website that has 
     a public repository, for ex on Gitlab there are some public repos 
     to clone, instead of a github url, it would be gitlab.com/randomrepo 
-    
+
+</h2>
+<h1>
+    SSH Config
+</h1>
+<h2>
+    SSH stands for Secure Shell, and an ssh key is used for authentication, 
+    for things like pushing to a repo from your local machine, your terminal 
+    will prompt you for your github email/password every time unless 
+    you set up your SSH key
+</h2>
+<h1>
+    Creating a repo
+</h1>
+<h2>
+    If you have repo you'd like to push to github, here are 
+    the steps:
+</h2>
+<h2>Option one:</h2>
+<ol>
+    <li>
+        Create a new repo on github
+    </li>
+    <li>
+        Connect your local repo (add a remote)
+    </li>
+    <li>
+        Push your changes to Github
+    </li>
+</ol>
+<h2>
+    Option two if you've not done work on your local repo yet:
+</h2>
+<ol>
+    <li>
+    Create new repo on github
+    </li>
+    <li>
+        Clone it down to your machine
+    </li>
+    <li>
+        Do some work locally
+    </li>
+    <li>
+        Push changes back up to github
+    </li>
+</ol>
+
+    <h1>
+        Remote
+    </h1>
+    <h2>
+        The next thing we need to do is take an empty github repo, and 
+        configure it so that it knows about our local repo, we do this with 
+        a remote, like a destination url, like a label, so we can fetch code
+    </h2>
+    <h2>
+        To view any existing remotes you may have you can use the 
+        git remote or git remote -v (v stands for verbose, use for more 
+        info) if we haven't added any remotes, it will display nothing
+    </h2>
+<h2> 
+    We use the command: git remote add name url, a standard name 
+    is git remote add origin https://github.com/blah/repo.git
 </h2>
 
+<h2>
+    We can also rename / remove our remotes with the following commands:
 
-
-
-
-
-
+</h2>
+<Ul>
+    <li>
+        git remote rename "name-here" "new-name-here"
+    </li>
+    <li>
+        git remote remove "name-of-remote-to-remove"
+    </li>
+</Ul>
 
 
 
