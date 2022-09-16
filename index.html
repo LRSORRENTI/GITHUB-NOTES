@@ -1350,6 +1350,26 @@ Dropped stash@{0} (a95a8d099dd503aacb5f9e700acc151b132dc1d8)
 14. Add and commit the changes on the `the-truth` branch
 </h2>
 
+<h1>====================================== ======================</h1>
+<h1>KEEPING FILES LOCAL TO EACH BRANCH, WE MUST ADD AND COMMIT</h1>
+<h1>=============================================================</h1>
+<h2>Note to self, if we create a branch off of main/master, master has one file: index.html,
+    let's say we create a branch called test ,
+    then we switch to test and inside of test we create a new file; test.txt,
+     if we switch back to main/master, that 
+    file comes with us, and if we ls it will show 
+    both index.html and test.txt, 
+     If we want to leave the file on the test branch, and keep it separate from 
+     main/master we must commit the changes to the test branch first, then 
+     switch to master/main. I wanted to create this note because I kept 
+     wondering why these branch specific files were moving across branches,
+     it's because the added files must be added and committed to the 
+     branch they are on before switching branches, otherwise they'll 
+     come along for the ride
+</h2>
+
+
+
 <h1>
     Undoing changing and time-traveling in Git
 </h1>
