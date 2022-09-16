@@ -1886,8 +1886,134 @@ Our local repo knows nothing about it.
 They're not connected in any way, but that's going to change in the next video.
 
 </h2>
-
-
+<h1>GIT REMOTE SETUP</h1>
+<h2>
+    All right.
+So the next thing that we need to do is take this empty GitHub repo that's in the cloud.
+It's not connected at all to our local repo and somehow configure our local repo so that it knows about
+this GitHub repo.
+</h2>
+<h2>
+Well, the way that we do this, whether we're using GitHub or any other service that hosts the repo,
+is to set up a git remote.
+So a remote is really just a fancy name for like a destination URL.
+It's a URL that we tell get about and we give it a name.
+It's just like a label for a URL that we can then push code up to or fetch or pull down new code from.
+</h2>
+<h2>
+So we'll learn about those commands once we set up a remote.
+So an easy place to start is with this command git remote or get remote dash v.
+They won't do anything except list to you the current remotes that you have in a repository.
+So in our repository we have not configured any remotes.
+Right?
+At this point.
+We haven't done anything with remotes.
+If I type git remote or git remote V, I'm in my book, my first novel, The Great Gatsby repo nothing.
+But if we actually go to any of the repos that we cloned, if you follow a followed along, I cloned
+this 2048 repo from GitHub.
+Remember this one it has a whole bunch of commits it's that addicting 2048 game anyway if I type get
+remote in here I see something now origin we'll talk about that in a moment.
+</h2>
+<h2>
+Let's do dash v so you can see the difference.
+If I do dash v, I think it's verbose.
+We see the name of of a remote and the corresponding URL.
+So I didn't set this up right.
+All I did was get clone and then this URL and by doing that get made me a local repo.
+It put all these files in here, it gave me all the history and it set up a remote that said the original
+GitHub URL that this repo came from, that it was cloned from IS right here.
+So by setting this URL up, this remote origin, it gives me the ability later on to say, Hey, Git,
+is there any new code on that URL?
+Is there any new updates?
+Or if I was a collaborator, hey git, I'd like to push up my new ten commits.
+</h2>
+<h2>
+It's kind of a lot to push up, but I'd like to push my new two commits that I did today up to Origin.
+So I'll just show you one more example.
+If I take a look at that see sample project that was the one that I cloned in the second video I did.
+It's really very simple.
+Nothing in it.
+It came from was it Bitbucket?
+I believe if I do get remote V No, git lab.
+Sorry, it was a non github repository.
+The same thing is true.
+Right.
+I have a remote called origin automatically set up.
+I didn't do that and it set to whatever I cloned or whatever the URL is that I cloned it from.
+Okay.
+So we did not clone this repository, right?
+My first novel, we we ran getting it.
+We created it from scratch.
+So there are no remotes, but we can make a remote using this command, get remote add and then a name
+and a URL.
+So this is a way of telling git hello gets.
+Please remember this URL using this name.
+So whatever the name is that we provide.
+So a really standard name is origin.
+</h2>
+<h2>
+So get remote, add origin and then some github URL for a github repo that we've created is telling
+git.
+Hey, here's a URL, I'm going to call it origin.
+You remember that anytime I refer to origin, I'm talking about this URL.
+So the term origin, it's just a conventional git remote name, but it's not special in any way.
+No magical powers.
+It doesn't have any secret abilities.
+It's just a name for a URL you could rename them.
+You can come up with whatever names you want for remotes, but origin is what you'll see all the time,
+similar to how the master branch is a default name or the default name for branches, you can change
+it to anything.
+So in the same way that master is just a name for a branch origin.
+It's just a conventional name.
+You'll see it a lot, but it is not somehow special.
+It's just a name for a remote.
+</h2>
+<h2>
+So we could instead add a new remote for the same URL, but instead call it my github URL or lol or
+chickens are my friends, whatever you want, but I would suggest origin because it's what you'll see
+the most and then a URL.
+And actually if we go to the GitHub repository that we created that's empty, we see some instructions.
+It's telling us, first of all, if you've done this thing before, this kind of thing before, here's
+a URL that is the URL for my repo.
+I hope this goes to that.
+Saying you should be using your URL, right?
+</h2>
+<h2>
+Not my repo because you won't have permission to push your code up to my repository.
+So I hope you made your own.
+If you're following along then it's telling me if you don't have a repo yet on the like at all locally,
+follow these instructions.
+But I do.
+So I'm not following those.
+This is what we want.
+Push an existing repo from the command line and take a look at the very first line.
+Get remote, add origin and then the URL for my git repo.
+It's the same URL we see here, so I'm going to copy that or just copy the whole line.
+It doesn't really matter.
+I guess I'll separate it out just to hit the point harder here.
+So I'm on the my first novel repository right now.
+No remotes now get remote add and then a name.
+I'm going to go with origin.
+It's conventional.
+</h2>
+And then this GitHub URL, whatever your GitHub URL is for that repo.
+Now nothing really happens.
+But of course we can check our work with what we just saw get remote v.
+So hopefully we see origin set up to this URL and it is.
+So that's kind of all we need to do for now.
+We've connected.
+We've told our local git repo about a GitHub URL called Origin or that's the name that will refer to
+it by.
+<h2>
+So in the next video, I'll show you how we can push code up to origin.
+I just want to emphasize one more time, it's just a name for a URL, a remote destination, and this
+is not super common, but if needed you can rename a remote with this command, get remote, rename
+the old name, space, new name and you can get rid of a remote with git remote remove and then the
+name that you're trying to delete.
+And later on we'll actually see that it's somewhat common to have multiple remotes, especially when
+you're working on open source projects.
+We'll talk about workflows and how that would work when we get to that section.
+</h2>
 
 
 
