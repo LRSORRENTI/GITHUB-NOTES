@@ -2015,9 +2015,179 @@ you're working on open source projects.
 We'll talk about workflows and how that would work when we get to that section.
 </h2>
 
-
-
-
+<h1>Intro to Git Push</h1>
+<h2>
+So we have one more step to get our code up on GitHub.
+We just need to push it up.
+So if you remember option one, what we're following here.Option one out of two is to create a new repo on GitHub, which we've done.
+Connect the local repo by adding a remote to our GitHub repo.
+We just did that in the previous video.
+Now we need to push our changes up so we have our existing repo.
+I'm doing that stupid Great Gatsby novel fake repo.
+I created an empty GitHub repo and then I set my remote called Origin so that it points at this empty
+GitHub repo.
+So the final step is to push up.
+So we do this using the git push command.
+</h2>
+<h2>
+Again, this is not GitHub specific though.
+Everything will be pushing to will be a GitHub repo, but the get push command is a git command that
+existed long before GitHub.
+And there are many other places where you can have a hosted repo that you can push to.
+So it works with any remote.
+Basically the syntax is git push and then a remote.
+</h2>
+<h2>
+In our case we just have one which is origin, but we can have multiple.
+So we have to tell git where we're pushing, what's the destination repository and what branch to push.
+So, you know, we might have a really large repo with a ton of branches.
+Like actually we don't have a ton here, but we've got a couple.
+No, just to.
+Oh, well, this is because this video or this repo was created before we went into branching.
+But some of our repos have like, I don't know, seven, eight, maybe ten branches and you may not
+want all of them on GitHub or you may not want to push them all at once at least.
+So when we push, we call out a particular branch that we want to send to GitHub.
+Often that will be your master or main branch, but you can push any branch up to GitHub and I'll show
+you that.
+<h2>
+So this is a really common command to get Push Origin Master, though it is becoming slightly less common
+as more people rename their master branch to Main.
+If you recall, we talked about this early on when I introduced branching.
+It now comes up again Master versus Main because GitHub, as I mentioned at the end of 2020, decided
+to make the default branch name on a GitHub repo main instead of master.
+So their instructions tell you to add a remote called Origin, but then rename your branch the master
+branch to Main and then push Main.
+So I will do this as well.
+In a separate video I will show this process.
+It's the exact same process.
+We rename a branch, we name it main, and then we push up Main.
+But I'm going to start with Master, just to keep this as simple as possible, because we have a master
+branch, right?
+</h2>
+<h2>
+We've been working with the term master, so we'll start there first.
+So I have this remote called origin as we already discussed, get remote dash v, we see what it's pointing
+to and it's always a good idea to see what what we have, if we have any uncommitted changes that won't
+go up otherwise we're ready.
+We're going to do a git push and then origin is where we're pushing to and then master is the branch
+we are pushing up.
+Okay, so this is what our GitHub looks like right now.
+I'll refresh.
+There's nothing here except these instructions.
+This is the repo.
+But now I'm going to push and there's going to be a substantial change.
+And remember.
+</h2>
+Oh, gosh, I put images in this repo, didn't I?
+Well, that's why it's taking a little bit.
+So you can see here I have some images in that mood board.
+Usually you don't include images in a or at least not large images like I have, but it finished up.
+Most repos are going to push way, way, way faster than that because they're usually just code.
+So I'm going to refresh the page.
+And now we see something entirely different.
+Right.
+We don't see those instructions.
+Now we see our file contents.
+So chapter one, chapter two, chapter three, characters outline.
+We see different commits.
+I'll actually do a separate video where I walk through what we see, but we also have access to things
+like contributors.
+We can see there's only one branch which is the master branch, and I can take a look at chapter one.
+For example, here's the contents of Chapter one.
+</h2>
+Okay.
+So we have our code up here.
+Now, what I want to show you is that we can push any branch.
+I talked about pushing master because that's what we have on this project.
+But if we make a new branch, which I'll just make, what should my branch be called?
+How about empty or nearly empty?
+I switch to that branch and I'm just going to delete pretty much everything in here.
+I'm going to delete Moodboard for sure.
+So that's actually our m dash ref to get rid of that.
+It's a folder.
+And erm.
+How about all chapters?
+Chapter one.
+I'll just leave the outline and the characters.
+So now, whoops, this is all we have.
+I'm on a branch, though, called Empty, so I'm going to add everything and then get, commit, delete
+most things.
+All righty.
+</h2>
+<h2>
+Now, if I want to push the code that I just changed, I want to push my last commit from this branch.
+Remember, I'm on the empty branch.
+I need to push the empty branch.
+So let me illustrate that here.
+I've got some diagrams.
+What we just did was we pushed up our master branch to GitHub.
+So there was nothing on GitHub.
+I pushed up master.
+Whoops, I went to far get push origin master assuming our remote is named Origin.
+Now in this diagram, I have a second branch called New Feature.
+I'm going to push that up.
+Get Push Origin new feature.
+In our case, our branch is called empty.
+So get push origin empty.
+I don't have to be on this branch, by the way.
+I happened to be on it, which is very common that you're taking a look at what's on a branch and then
+you push it up, but you don't have to be on it.
+So get push origin empty.
+And remember, if it asks you for your password, not a big deal.
+It put your email and password or your username and password, but go back and check out the SSH video
+so that it doesn't have to keep bugging you, you know, asking you for a password every time you push.
+</h2>
+<h2>
+Okay.
+So now I'm going to refresh.
+And it doesn't look like much changed.
+But now we have two branches and we can see the two branches here, master and empty, and I can switch
+between them.
+And this is my empty branch.
+I'm just viewing it on GitHub and you'll see it just has two files.
+Right?
+Go back to Master.
+And I have a whole bunch of stuff.
+So I'm going to just go through this process one more time, just to make it very clear, I'm going
+to go back to Master, get switch master and let's make some some changes.
+We'll do some new work here.
+How about chapter four?
+Dot txt.
+All righty.
+And I'll just leave it blank, I guess.
+And I'm going to add that.
+So get ADD Chapter four, get commit.
+Begin Chapter four.
+</h2>
+<h2>
+Pop quiz.
+What's on my GitHub?
+What's the most recent comet that I'll see on the GitHub repo?
+Nothing has changed on GitHub.
+It's still exactly the same.
+If we're looking at the master branch, nothing's changed.
+If we're looking at the empty branch, nothing has changed since we last pushed.
+GitHub doesn't just stay in sync automatically with my local repo.
+I have to push.
+So why don't I push up that commit?
+Chapter four begin chapter four.
+Now I said push up that commit.
+We don't select a specific commit.
+We push an entire branch as we've talked about.
+So I made that commit on the master branch.
+So I'll push that up, get push origin.
+The only remote we have right now.
+Origin Master.
+Now, if we head over here and refresh, we see first of all, my most recent commit begin chapter four
+one minute ago.
+We also see the actual updated contents.
+Right.
+Chapter four text is right there.
+Okay.
+So in the next video, I'm going to kind of walk through a GitHub repository, show you how we view
+the commits, the branches, diffs or changes, all that stuff.
+And then we'll get some more practice with pushing and we'll talk about renaming to use the main branch.
+</h2>
 
 
 
