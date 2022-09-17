@@ -2217,8 +2217,47 @@ And then we'll get some more practice with pushing and we'll talk about renaming
 </h2>
 
 
-
-
+<h1>
+    The next section is more practice with git push. It went well, I did 
+    more practice with adding/deleting files/content then pushing those 
+    changes to github, and seeing github update with those changes 
+    in real time.
+</h1>
+<h2>
+   So colt just went over how we can push a local branch up to a different 
+   branch at the same time, example: 
+</h2>
+<h2>
+    git push remotename local-branch:remote-branch
+</h2>
+<h2>The exmaple colt uses is with a pancake branch thats local 
+    and a waffle branch that's remote, it's not very common but the 
+    point is that it's possible. git push origin pancake:waffle
+</h2>
+<h2>Another example </h2>
+<h2><ol>
+    <li>
+        git switch -c "cats" (this creates and switches to a new branch called 
+        cats)
+    </li>
+    <li>
+        touch cats.txt
+    </li>
+    <li>
+        git add cats.txt
+    </li>
+    <li>
+        git commit -m "create cats file"
+    </li>
+    <li>
+        git push cats:master (this tells git to take the cats branch containing 
+        a txt file and push it to our master branch on github)
+    </li>
+</ol>
+So we just pushed the cats branch to the master branch, this is a good 
+example that shows the difference between the branch on your 
+local machine and the branch one github.
+</h2>
 
 
 
