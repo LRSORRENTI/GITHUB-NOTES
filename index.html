@@ -2287,7 +2287,18 @@ local machine and the branch one github.
     Then push back to Github
 </li>
 </ul>
-
+Okay so this seems pretty easy, just create an empty repo, 
+copy the hash/cloning address, use the command: git clone https://github.com/Colt/chickens-demo.git
+Then a message pops up saying "you appear to have cloned an empty 
+repo", type git status and it should say on branch main/master, and if 
+we use the git remote -v command it shows we're all set up and 
+ready to start making changes, we can now git add/commit/push and 
+github will be good to update.
+</h2>
+<h2>
+    Also just a note, going forward we should use main instead of master 
+    for our big branch, we can rename a branch with this command:
+    git branch -M main
 </h2>
 
 
