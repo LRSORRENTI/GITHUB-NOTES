@@ -2300,8 +2300,40 @@ github will be good to update.
     for our big branch, we can rename a branch with this command:
     git branch -M main
 </h2>
+<h2>Keep in mind we have to change the default branch 
+    in github settings, after I used the git branch -M main, it didn't 
+    rename it, created a branch from master called main. To fully change the name 
+    there is a way:
+</h2>
+<h2>
+    Renaming Git Branch
+Follow the steps below to rename a Local and Remote Git Branch:
 
+Start by switching to the local branch which you want to rename:
 
+git checkout old_name
+Copy
+Rename the local branch by typing:
+
+git branch -m new_name
+Copy
+At this point, you have renamed the local branch.
+
+If you've already pushed the  old_name branch to the remote repository , perform the next steps to rename the remote branch.
+
+Push the new_name local branch and reset the upstream branch:
+
+git push origin -u new_name
+Copy
+Delete the old_name remote branch:
+
+git push origin --delete old_name
+Copy
+That's it. You have successfully renamed the local and remote Git branch
+</h2>
+<h2>
+    I'm going to leave master and main up on this project as an example.
+</h2>
 
 
 
