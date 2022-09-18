@@ -2367,17 +2367,121 @@ Remote tracking branches
     Git Pull
 </li>
 </ul>
+<h1>
+    A closer look at cloning
+</h1>
 
+<h2>
+    When we clone a repo, whatever it is, what happens is that after 
+    we clone the repo to our local machine we receive all the commits, 
+    all the files from the repo, but we also receive the "remote 
+    tracking branch", which is a reference to the state of the master 
+    branch on the remote, we can't move this, it's like a bookmark 
+    pointing to the last known commit on the master branch on origin
+</h2>
+<h2>
+    Remote tracking branches follow this pattern: remote/branchname
+</h2>
+<ul>
+    <li>
+        origin/master references the state of the master branch on 
+        the remote repo named origin
+    </li>
+    <li>
+        upstream/logoRedesign references the state of the logoRedesign 
+        branch on the remote named upstream (a common remote name)
+    </li>
+</ul>
+<h1>
+    Checking out remote tracking branches
+</h1>
+<h2>
+    So if on our main branch, let's make changes, add and commit them 
+    and now we have two commits locally on the main branch, and we see 
+    something new, theres a message in git bash that says:
+    On branch main
+    Your branch is ahead of 'origin/main' by 1 commit.
+      (use "git push" to publish your local commits)
+    
 
+</h2>
+<h2>
+    So if we do this again, after adding another name to our animals.txt 
+    file, now we see:
+    Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
 
+nothing to commit, working tree clean
 
+</h2>
+<h2>
+    So that's the point of this, it shows how many commits are 
+    since the origin/main
 
+</h2>
+<h2>
+    We can also checkout what our origin/main looks like, using 
+    git checkout origin/main, we'll end up in detached HEAD
+</h2>
+<h2>
+    So let's type git branch -r to view the remote tracking branch, 
+    in our case it's origin/main
+</h2>
+<h2>
+    After entering git checkout origin/main the following message 
+    is displayed:
+    git checkout origin/main
+Note: switching to 'origin/main'.
 
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
 
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
 
+  git switch -c new-branch-name
 
+Or undo this operation with:
 
+  git switch -
 
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 10e4639 Create pets.txt
+
+</h2>
+<h2>
+    We can now create another branch from this state, remember now 
+    our changes to pets.txt are gone , and we're back to pets.txt 
+    original state 
+</h2>
+<h2>
+    We can now switch back to the main branch, and our pets.txt 
+    file changes return, now we see reagan, maggie, and buck
+</h2>
+
+<h2>
+    So if we want those changes to go onto github, we just push 
+    them with git push origin main,
+</h2>
+<h2>I'm having some problems pushing to github, 
+    im changing my config from [core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[user]
+	name = Luke
+	email = lrsorrenti@yahoo.com
+[remote "origin"]
+	url = git@github.com:LRSORRENTI/GIT-GITHUB-COLT-STEELE.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+
+</h2>
+to the user email - lrsorrenti@hotmail.com, let's see if this works
 
 
 
