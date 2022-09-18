@@ -2496,14 +2496,64 @@ to the user email - lrsorrenti@hotmail.com, let's see if this works.... it didn'
     it works now so let's get back to the course.
 </h1>
 
+<h1>
+    NEXT SECTION: WORKING WITH REMOTE BRANCHES
+</h1>
+<h2>
+    For ex, if we have a repo we want to clone, that has many different 
+    branches on github, how do we work with those branches locally
+</h2>
+<h2>
+    So colt has a remote-branches demo repo we're going to clone, after 
+    cloning we type git branch and we see only one branch, main, even though on 
+    github we saw that this specific repo has 5 or 6 branches
+</h2>
+<h2>How do we work on the other branches then?
+Well we can view the remote branches with git branch -r command, we see all 
+the branches we couldn't see with just git branch, so 
+git knows about those branches, so that's why we need to discuss the diff 
+between  a full-fledged branch and a remote tracking branch
+</h2>
+<h2>
+    By default, when we clone a repo from github, we get the main/master 
+    branch, and automatically it's pointing to origin/master, but 
+    we have other branches in our case it's origin/movies, origin/food, origin/fantasy 
 
+</h2>
+<h2>
+    Let's say we want to work on a branch called puppies, what we could 
+    do is use checkout origin/puppies, but remember that puts us into 
+    detached HEAD state, 
+</h2>
+<h2>
+    Lets do git checkout origin/food, after entering it displays the 
+    "you are in deteched HEAD state", but now we can see the files 
+    inside of our food branch, 
+</h2>
+<h2>
+    Let's say I want access to these branches, we can use the git switch 
+    command + remote branch name to create a local branch of that remote 
+    branch so we can work on it
+</h2>
+<h2>
+    And yes this does now work, when I type git branch main AND food 
+    now show up as accessible branches locally
+</h2>
+<h2>
+    Now let's do the same for the remote movies branch, so from main type 
+    git branch -r to view all remote branches, we see movies is a remote 
+    branch, then type git switch movies, and voila we now have the remote 
+    movies branch local to our machine
+</h2>
+<h2>
+    Note: git switch is clutch in this regard, in the past we 
+    would need to type git checkout --track origin/movies in order 
+    to achieve the same as git switch movies, so more concise
+</h2>
 
-
-
-
-
-
-
+<h1>
+    Git Fetch : THE BASICS:
+</h1>
 
 
 
