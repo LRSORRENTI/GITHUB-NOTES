@@ -2600,8 +2600,28 @@ between  a full-fledged branch and a remote tracking branch
     our working directory, we can view them and see what Bob has 
     done to the project
 </h2>
+<h2>
+    Okay so the exercise went well, except when I added an apple.txt 
+    file on a different branch from master, then used git fetch, it wasn't 
+    showing up, I think it's because I didn't use git checkout, I used 
+    git switch
+</h2>
+<h2>
+   </h2>
+   <h2> Okay so I tried again but this time used this answer from stack overflow,
+    git checkout origin/yourbranchname -b newbranchname
+git log newbranchname
+You should see remote changes in the newbranchname.
 
+You can also merge those changes into your branch with
 
+git checkout yourbranchname
+git merge origin/yourbranchname
+</h2>
+<h2>
+    After entering the above I was able to view the changes I made on 
+    a new branch. 
+</h2>
 
 
 
