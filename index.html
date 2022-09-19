@@ -2603,7 +2603,7 @@ between  a full-fledged branch and a remote tracking branch
 <h2>
     So once we use git fetch origin master, in order to view those 
     changes we pulled down from github we use: git checkout origin/master
-    
+
 </h2>
 <h2>
     Okay so the exercise went well, except when I added an apple.txt 
@@ -2629,12 +2629,31 @@ git merge origin/yourbranchname
 </h2>
 
 
+<h1>
+    Git Pull
+</h1>
+<h2>
+    git pull is another command we can use to retrieve changes, except 
+    with pull it will integrate those changes, and immediately update 
+    our working directory, think of it as a git fetch + git merge all ine 
+    one go. As opposed to git fetch where we can view the changes, but our 
+    working directory stays the same.
+</h2>
 
+<h2>
+    The syntax is similar to fetch it's: git pull remote branchname 
+    so it would look like git pull origin master, so it would 
+    both fetch the data changes AND integrate in one command
+</h2>
+<h2>
+    Keep in mind where we run git pull matters, whatever branch 
+    we're on, that's where the changes will be merged to
+</h2>
 
-
-
-
-
+<h2>
+    Pulls can also result in merge conflicts, and we'll need to resolve 
+    them like a normal merge
+</h2>
 
 
 
