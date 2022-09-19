@@ -2552,14 +2552,54 @@ between  a full-fledged branch and a remote tracking branch
 </h2>
 
 <h1>
-    Git Fetch : THE BASICS:
+    Git Fetch THE BASICS:
 </h1>
 
+<h2>
+    Let's talk about fetching and pulling, fetch and pull are 
+    two commands we can use to get changes down from 
+    github, if you're working on a team, and someone makes/pushes 
+    changes, we use git fetch to pull those changes down from 
+    the remote repo (github) and it fetches them to our local repo,
+    just the local repo though, fetch does NOT bring the changes 
+    all the way to our current workspace, that's what git 
+    pull does. 
+</h2>
+<h2>
+    The git pull command will bring changes down from our remote 
+    repository (github) and bring them all the way down to our 
+    workspace.
+</h2>
+<h2>
+    So fetching allows us to download changes from github, BUT 
+    those changes will not automatically integrate into our workspace,
+    it let's you see what your teammates have been working on 
+    and the changes they've made, without having to merge those changes 
+    to your local repo
+</h2>
+<h2>
+    Think of git fetch as "hey, please go get the latest info from 
+    Github, but don't integrate it into my working directory"
+</h2>
 
-
-
-
-
+<h2>
+    The command itself is: git fetch origin, or git fetch remotenamehere 
+   If a remote is not specified after git fetch, it will automatically 
+   fetch origin
+</h2>
+<h2>
+    We can also use git fetch origin master or git fetch origin branchName 
+    to fetch a specific branch
+</h2>
+ 
+<h2>
+    A good way to think of it is, let's say your teammate Bob made 
+    3 changes to the remote repo, we can use git fetch to bring those 
+    changes down and view them without directly altering our 
+    working directory, those changes will not automatically change 
+    our working directory, we can view them and see what Bob has 
+    done to the project
+</h2>
 
 
 
