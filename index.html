@@ -2661,14 +2661,12 @@ git merge origin/yourbranchname
 </h2>
 <h2>
     Type the subject of your commit on the first line. Remember to keep it short (not more than 50 characters). 
-    Leave a blank line after.
-Write a detailed description of what happened in the committed change. 
-Use multiple paragraphs and bullet points to give a detailed breakdown. 
+    Leave a blanagraphs and bullet points to give a detailed breakdown. 
 Don't write everything out on one line, instead, wrap text at 72 characters.
 Press Esc and then type :wq to save and exit.
 </h2>
 <h2>
-    Then the changes from github, two ascii art files were fetched and 
+    Then after entering esc and :wq the changes from github, two ascii art files were fetched and 
     merged into my working directory
 </h2>
 
@@ -2681,6 +2679,89 @@ Press Esc and then type :wq to save and exit.
     fast forward merge and things go smoothly, but if changes were 
     made on github, then we try to pull, a merge conflict may appear
 </h2>
+
+<h1>
+    Shorter syntax for git pull
+</h1>
+<h2>
+    Often when we use git pull, we can get away with a shorter syntax:
+    git pull
+</h2>
+
+<h2>
+    If we run git pull without specifying a particular remote/branch to 
+    pull from, git assumes the following:
+
+</h2>
+<ul>
+    <li>
+        Remote default to origin
+    </li>
+    <li>
+        Branch will default to whatever tracking connection is 
+        configure for our current branch
+    </li>
+</ul>
+
+<h2>
+    Note: This behavior can be configured and tracking connections can be 
+    changed manually. Most people don't mess with this stuff
+</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
