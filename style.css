@@ -5,7 +5,7 @@
 }
 
 .header{
-    font-size: 60px;
+    font-size: 25px;
     display: flex;
     flex-direction: row;
    justify-content: center;
