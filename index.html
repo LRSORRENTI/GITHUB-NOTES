@@ -2957,11 +2957,86 @@ Press Esc and then type :wq to save and exit.
     </ul>
 </h3>
 
+<h2>
+    Centralized Workflow, what is it?
+</h2>
+<h3>
+    Centralized workflow is when everyone works on master/main, it's 
+    the simplest workflow to have everyone work on a single branch, 
+    it's straightforward but has quite a lot of shortcomings!
+</h3>
 
+<h3>
+    Let's look at an example, we have 3 collaborators: Pamela, David, 
+    and Forrest. 
+</h3>
+<h3>All three of them clone the main/master branch of the github repo to their 
+    local machines
+</h3>
+<h3>
+    Forrest works on a new feature all day, adding and committing all 
+    day long, let's say he has 2 total commits on the master branch, so he 
+    then pushes it up to GitHub
+</h3>
+<h3>
+    Pamela has also been working on a new feature, as she's been 
+    working Forrest pushed some code up, but now Pamela's done 
+    and wants to push her code up
+</h3>
+<h3>
+    So she tries git push and the following error message is 
+    displayed: 'Failed to push. Updates were rejected because the 
+    tip of your current branch is behind it's remote counterpart. Merge 
+    the remote changes (e.g. 'gitpull') before pushing again
+</h3>
+<h3>
+    So she does that, she uses git pull to get the changes from the 
+    origin master. Forrest's work must be merged in. Hopefully this goes 
+    smoothly! There may be conflicts, there may not be. But she has 
+    to do it in order to push back up to master/main.
+</h3>
+<h3>
+Now during all of this, David is working on a new feature but is 
+having some doubts, he'd like to share his commits with 
+the rest of the team to start a discussion, he's made a lot of changes 
+and things aren't working properly, so he wants to discuss with the 
+team.
+</h3>
 
-
-
-
+<h3>
+    David can't simply push his code up to share it, Pamela tried that 
+    as well and needed to pull Forrests changes down first, merge those 
+    changes and then push
+</h3>
+<h3>
+    Before he can even share his incomplete/problematic code, he needs 
+    to pull and merge from GitHub, then push his work up. THEN everyone 
+    can pull his work down, and he may have broken the codebase 
+    if this actually happens, depending on how problematic 
+    his code is
+</h3>
+<h2>
+    The problem:
+</h2>
+<h3>While it's nice and easy to only work on a single branch, this 
+    leads to serious issues when working on a team!
+    <ul>
+        <li>
+         Lot's of time spent resolving conflicts and merging code, especially 
+         as team size scales up.
+        </li>
+        <li>
+            No one can work on anything without disturbing the main 
+            codebase. How do we add something radically different in?
+            How do we experiment then?
+        </li>
+        <li>
+            The only way to collaborate on a feature together, with another teammate
+            is to push incomplete code to main/master, resulting in a broken 
+            codebase
+        </li>
+    </ul>
+</h3>
 
 
 
