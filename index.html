@@ -3263,18 +3263,78 @@ master/main branch, enter FEATURE BRANCHES
 <h3>
     Also keep in mind we can use git clone after forking ourselves 
     a copy, that way our remote is set up automatically, 
-    so the basic fork would be: fork the given repo, 
+    so the basic fork workflow would be: fork the given repo, 
     then clone to local machine so our remotes are set up 
     and we can push our changes to the forked copy
 </h3>
+<h2>
+    THE FORK AND CLONE WORKFLOW
+</h2>
+<h3>
+    So we forked a repo, then cloned it to our local machine, 
+    so that copy is ours. We can change it, break it, push 
+    changes to github since we set up the remote automatically
+    after using git clone
+</h3>
+<h3>
+    Also Github will display how many commits ahead we 
+    are of the original copy, so if we wanted to submit 
+    a pull request, let's say we added a cool feature that 
+    doesn't break anything, we can send the owner of the original repo 
+    a pull request from our fork, we should only do this 
+    if we're confident that our change could be beneficial and 
+    won't break anything
+</h3>
+<h3>
+    That's the basis of the fork/clone workflow, you fork 
+    an open-source repo, clone it down,
+     make or fix a small feature and push it back up to 
+     our copy of the repo, then submit a pull request if you 
+     think your changes work and won't break anything
+</h3>
+<h3>
+    So remember, when we clone a repo from our Github, 
+    we automatically have a remote called origin, because 
+    cloning always auto sets up the remote
+</h3>
+<h3>
+    BUT we can also set up a second remote, this remote 
+    we'll call it 'upstream', so we can have a place 
+    we can pull changes down from the original non-forked 
+    repo, let's say the main repo had some significant changes 
+    made, we can now pull those changes down using our 
+    upstream remote
+</h3>
 
-
-
-
-
-
-
-
+<h3>
+    Remember we only push to our fork, using the origin remote, 
+    and we use the upstream remote to pull changes down 
+    from the original repo
+</h3>
+<h3>
+    So the cycle looks like this:
+</h3>
+<h3>
+    <ol>
+        <li>
+            Fork repo
+        </li>
+        <li>
+            Clone repo
+        </li>
+        <li>
+            Make changes and push to our fork
+        </li>
+        <li>
+            Pull any new changes from original repo using 
+            upstream remote
+        </li>
+        <li>
+            Create pull request if our changes help and 
+            don't break anything
+        </li>
+    </ol>
+</h3>
 
 
 
