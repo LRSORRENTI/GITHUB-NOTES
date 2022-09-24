@@ -3566,6 +3566,28 @@ Nice to have:
 </h3>
 
 
+<h2>Rewording commits with INTERACTIVE REBASE</h2>
+<h3>
+    Running git rebase with the '-i' flag will enter the 
+    interactive mode, which allows us to edit commits, add files, 
+    drop commits etc.. Note, we must specify how far back to go
+</h3>
+<h3>
+    Also know that we are NOT rebasing onto another 
+    branch, instead we're rebasing a series of commits onto 
+    the HEAD they're currently on
+</h3>
+
+<h3>
+    Okay so I just finished with colt's interactive rebase 
+    demo, and I got it to work, my default editor wasn't set, so 
+    I googled it and after running: git config --global core.editor "code --wait"
+    that fixed the problem, I was then able to run: git rebase -i HEAD~9 
+    and VSCODE automatically opened the visual based rebasing tool,
+    easy to follow instructions, and git bash was waiting until I closed 
+    the interactive rebase, then changed that specified commit message
+</h3>
+
 
 
 
