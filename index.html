@@ -3415,12 +3415,54 @@ master/main branch, enter FEATURE BRANCHES
 </h3>
 <h3>
     I start to work on a new feature, so I make a new feature 
-    branch, 
+    branch,  and I do some work on that feature branch, but 
+    a few hours later, one of my teammates finished the feature that 
+    they were working on, and that code is merged into main, so 
+    we want that work now, we usually never want to diverge from the 
+    main branch for a long time without gettingthose 
+    changes 
+    </h3>
+    <h3>
+        So we then merge main into our feature and keep working,
+        then we do more work, but the next day there's even more 
+        new changes on main branch, so we merge again, 
+        we merge master into our feature branch
+    </h3>
+    <h3>
+        So now our feature branch has a bunch of merge commits, 
+        if the main branch is very active, our feature 
+        branch history is muddied
+    </h3>
+    <h3>
+        This is something rebasing can help with
+    </h3>
+    <h2>REBASING!</h2>
+<h3>
+    We can instead rebase the feature branch onto main branch, 
+    this moves the entire feature branch so that it BEGINS at 
+    the tip of main branch, all the work is still there, but 
+    we have re-written history
 </h3>
-
-
-
-
+<h3>
+    Instead of using a merge commit, rebasing rewrites history
+    by creating new commits for each of the 
+    original feature branch commits
+</h3>
+<h3>
+    git switch feature 
+    <br>
+    git rebase main
+</br>
+</h3>
+<h3>
+    So when we rebase instead, we rewrite history, based upon 
+    the original feature branch commits, the tree becomes 
+    linear, feature branch is at the tip of main
+</h3>
+<h3>
+    Another way to rebase is to wait until we're fully done with 
+    our feature/code then rebase the feature onto main branch
+</h3>
 
 
 
