@@ -3463,11 +3463,54 @@ master/main branch, enter FEATURE BRANCHES
     Another way to rebase is to wait until we're fully done with 
     our feature/code then rebase the feature onto main branch
 </h3>
-
-
-
-
-
+<h2>Rebasing in essence</h2>
+<h3>
+    In essence rebasing is used when we want to clean 
+    up merge commit history, it creates brand new commits 
+    for each of our feature branch commits, no unnecessary
+    merge commits, our project history is now linear
+</h3>
+<h3>
+    This won't screw up the main branch itself, but 
+    it will put all of our commits at the tip of the 
+    main branch, 'rebasing' them at the tip
+</h3>
+<h3>
+    This is demonstrated visually in GitKraken our GUI, 
+    before rebasing our commit history is non-linear, after 
+    using git rebase all our commits are in-line and on 
+    the tip of main
+</h3>
+<h2>THE GOLDEN RULE, WHEN NOT TO REBASE</h2>
+<h3>
+Never rebase commits that have been share with others, if 
+you've already pushed commits to GitHub... DO NOT REBASE them 
+unless you're positive no one on your team is using those 
+commits
+</h3>
+<h3>
+    You can rebase your feature branch, but don't rebase other branches 
+    that are not yours. 
+</h3>
+<h3>
+    Remember to rebase we use the git command from our feature branch, 
+    so the workflow looks like this :
+   
+</h3>
+<h3>
+    <ol>
+        <li>
+            git switch feature
+        </li>
+        <li>
+            git rebase main
+        </li>
+    </ol>
+    When we use rebase we ALWAYS type the command from 
+    our branch, not anyone elses/main branch, always type 
+    git status, check and make sure you're on 
+    your own feature branch, then type git rebase main
+</h3>
 
 
 
