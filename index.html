@@ -3799,11 +3799,53 @@ completely
     If we type git tag -1 "v17*", all the tags that begin with 
     v17 will be displayed
 </h3>
-
-
-
-
-
+<h2>
+    Comparing tags with git diff
+</h2>
+<h3>
+    We can also checkout tags using git checkout tagname, 
+    to view the state of a repo at that tag point, this puts 
+    us in detached HEAD!
+</h3>
+<h3>
+    If we type git checkout 15.3.1, we will go into detached HEAD, 
+    where we can do some experimenting, create a new experimental 
+    branch off of this specific commit , like git switch -c "
+    BRANCH_FROM_TAG_15.3.1"
+</h3>
+<h3>
+    We could diff betwwen tags to see the difference between 
+    them, like git diff v17.0.0 v17.0.1, which would 
+    display all the changes made in the v17.0.1 patch, we can 
+    even do this to compare major changes, like git diff v.15.0.0 
+    v.17.0.0, this would display a huge list of differences
+</h3>
+<h2>
+    Creating lightweight tags
+</h2>
+<h3>
+    To create a lightweight tag, we enter: git tag tagname, this 
+    will create a tag referring to the commit the HEAD is 
+    referencing, like git tag v17.0.4, this will create the 
+    tag v17.0.4
+</h3>
+<h2>
+    Annotated tags
+</h2>
+<h3>
+    We can use annotated tags to create a new tag but with 
+    annotated we can append a message to our tag, similar to 
+    a commit message, git tag -a tagname, this will open 
+    vscode to ask for a message to add to the tag, we can 
+    also use the '-m' flag to write a message on the command line 
+    instead of using our editor
+</h3>
+<h3>
+    Now to view the tag message, we use the command: 
+    git show tagname, so git show v17.0.1, this will 
+    display the message that was appended to the specified 
+    tag
+</h3>
 
 
 
