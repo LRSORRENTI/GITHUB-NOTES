@@ -3847,6 +3847,83 @@ completely
     tag
 </h3>
 
+<h2>
+    Tagging previous commits
+</h2>
+<h3>
+    We can tag older commits with the following command: 
+    git tag tagname commithash, git tag v1.0.1 67e841982, 
+    on the commit that has 67e841982 as it's hash id, 
+    a tag is created, v1.0.1
+</h3>
+<h2>
+    Replacing tags with git force
+</h2>
+<h3>
+    We can use the '-f ' flag to force our tag through, git 
+    will yell at us if we reuse a tag that's already referring 
+    to a commit, git tag -f tagname
+</h3>
+<h3>
+    This is useful if we accidentally tag the wrong commit hash,
+    but we must include the '-f' otherwise git will throw 'fatal 
+    error message'
+</h3>
+<h2>
+    Deleting tags
+</h2>
+<h3>
+We can delete tags using the command: git tag -d tagname
+</h3>
+<h3>
+    So if we type git tag -d v1.0.2, that tag will be deleted
+</h3>
+
+<h2>
+    Pushing tags (IMPORTANT)
+</h2>
+<h3>
+    By default, the git push command doesn't transfer tags 
+    to remote servers, if you have many tags you want to push 
+    up at once, you need to use this command: git push --tags, 
+    this will transfer all your tags to the remote server
+</h3>
+
+<h3>
+    Or to push a single tag the command is: git push origin tagname, 
+    git push origin v1.1.3, v.1.1.3 will be pushed
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
