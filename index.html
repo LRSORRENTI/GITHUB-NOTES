@@ -3685,6 +3685,102 @@ Nice to have:
     </ul>
 </h3>
 
+<h3>
+    The idea behind Git Tags
+</h3>
+<h3>
+    Tags are pointers that refer to particular points in 
+    Git history, we can mark a particular moment with a git tag.
+    Tags are most often used to mark version releases in projects:
+    (v4.1.0 or v4.1.1 etc..)
+</h3>
+<h3>
+    Think of tags as branch references that don't change, once a tag 
+    is created, it always refers to the same commit, it's just 
+    a label for a commit
+</h3>
+
+<h3>
+    The two types of tags:
+    <ul>
+        <li>
+            Lightweight tags: these tags are... lightweight, they're 
+            just a name/label that points to a specific commit
+        </li>
+        <li>
+            Annotated tags: these tags store extra meta-data including 
+            the author's name, current date, email, and a tagging 
+            message. Similar to a commit message
+        </li>
+    </ul>
+</h3>
+<h3>
+    But first let's go over 'versioning'
+</h3>
+<h3>
+    Semantic versioning spec outlines a standardized versioning 
+    system for software releases, it provides a consistent way for 
+    developers to give meaning to their software releases (how big 
+    of a change is this release??)
+</h3>
+<h3>
+    Versions always consist of 3 numbers separated by periods,
+    version 1.0.0 or version 1.3.0, version 2.4.1 etc...
+</h3>
+<h3>
+   2.4.1 The first number in the sequence denotes major releases (2),
+The second number denotes minor releases(4) and the last number
+denotes patch releases(1)
+</h3>
+
+<h3>
+    The initial release is typically always 1.0.0, version 
+    1.0.0 defines the public API, then with the first 
+    patch release it becomes version 1.0.1, and minor releases 
+    become 1.1.1
+
+</h3>
+The first number is reserved for major releases, version 1.3.5 now 
+becomes 2.0.0, or version 3.5.1 becomes version 4.0.0, these 
+are significant changes that are no longer backwards 
+compatible, features have been changed substantially or removed 
+completely
+<h3>
+    The second number denotes new features or functionality 
+    that was added to the project, but the project is still 
+    backwards compatible, no breaking changes, the new functionality 
+    is optional and should not force users to 
+    rewrite their own code
+</h3>
+<h3>
+    The last number denotes patch releases, these typically 
+    don't contain significant changes, huge new features, but 
+    usually include bug fixes, and other changes 
+    that don't impact how the code is used
+</h3>
+<h3>
+    This is very important when you may be using 
+    a certain library, or peice of software as a depedency for 
+    your own software you're building
+</h3>
+<h3>
+    Take bootstrap for CSS, if we go to github we can 
+    view the tagged releases of bootstrap over time, like 
+    bootstrap version 4.5.1, then above it is bootstrap version 
+    4.5.2, and each version has notes describing what's changed 
+    in the new version
+</h3>
+<h3>
+    React has similar tags like react version 16.10.0 , react version 
+    16.13.0, 17.0.1 
+</h3>
+<h3>
+    That's the idea behind Semantic versioning
+</h3>
+
+
+
+
 
 
 
