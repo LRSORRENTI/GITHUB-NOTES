@@ -3981,13 +3981,37 @@ We can delete tags using the command: git tag -d tagname
     Also remember when we use git checkout, HEAD now references 
     that specific commit, main is still pointing at the tip
 </h3>
+<h2>
+    Inside Git: The OBJECTS Folder
+</h2>
+<h3>
+    This is really the 'core' of git, this is where the history 
+    of our file is stored, this is where the backups are, 
+    where the commits are, this directory contains ALL the repo 
+    files
+</h3>
 
-
-
-
-
-
-
+<h3>
+    The files here are all compressed and encrypted, they won't 
+    look like much
+</h3>
+<h3>
+    But inside this folder there are four types of git objects:
+</h3>
+<h3>
+    <ul>
+        <li>
+            Commits
+        </li>
+        <li>
+            Trees
+        </li>
+        <li>
+            Blobs
+        </li>
+        Annotated tags
+    </ul>
+</h3>
 
 
 
