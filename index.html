@@ -4082,13 +4082,69 @@ We can delete tags using the command: git tag -d tagname
     Hashing functions, SHA-1, MD5 (Message-Digest Algorithm), ECDSA (Elliptic Curve Digital 
     Signature Algorithm)
 </h3>
+<h2>
+    Git as a Key-Value Datastore
+</h2>
+<h3>
+    Git database, git is a key-value data store, we can insert
+    any kind of content into a Git repository, and Git will 
+    hand us back a unique key we can later use to retrieve 
+    that content, The keys we get back are SHA-1 checksums
+</h3>
+<h3>
+   Now remember the four git objects: commits, trees, blobs, and 
+   annotated tags, all of these are hashed using SHA-1
+</h3>
+<h3>
+    To summarize git allows us to store our data, and in return 
+    git gives us a 'key' to access that data, that 'key' is 
+    our 40 digit SHA-1 hash
+</h3>
 
+<h2>
+    Hashing with the Git Hash-Object
+</h2>
 
+<h3>
+    So let's try the command: git hash-object filename
+</h3>
+<h3>
+    The git hash-object command takes in some data, stores in our 
+    .git/objects directory and gives us back the unique SHA-1 hash 
+    that refers to that data object
+</h3>
+<h3>
+    In the simplest form Git simply takes content and returns 
+    the unique key that WOULD BE used to store our data, but 
+    doesn't actually store anything
+</h3>
+<h3>
+    echo 'hello' | git hash-object --stdin
+</h3>
+<h3>
+    The --stdin option  tells git hash-objects to use the content 
+    from stdin rather than a file, for example it will hash the word 
+    'hello'
+</h3>
 
-
-
-
-
+<h3>
+    The 'echo' command repeats whatever we tell it to repeat 
+    to the termindal, we pipe the output of echo to git hash-object
+</h3>
+<h3>
+    If we echo "hi" | git hash-object --stdin, git gives us 
+    back a 40 hexadecimal value, and everytime we hash "hi", 
+    we should always get back that exact same 40 hexadecimal value that 
+    corresponds with "hi", and "hello" will have a very different
+    hexadecimal value than "hi"
+</h3>
+<h3>
+    But if we append the -w flag to the end like this:
+    echo 'hello' | git hash-object --stdin -w, 
+    this tells git to actually write the object to the 
+    database, after running the command the oontents 
+    of our .git/objects folder will change
+</h3>
 
 
 
