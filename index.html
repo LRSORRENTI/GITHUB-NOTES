@@ -4145,6 +4145,114 @@ We can delete tags using the command: git tag -d tagname
     database, after running the command the oontents 
     of our .git/objects folder will change
 </h3>
+<h3>
+    And yes after inputting the command and entering: code .git, into 
+    the command line, VSCODE opens with a huge directory, and that 
+    commint the starts with 'ce' is inside that directory, inside 
+    the objects folder
+</h3>
+
+<h2>
+    Retrieving data with: git cat-file
+</h2>
+<h3>
+    Now that we have data stored in our git object database, we can try 
+    Retrieving that data with the git cat-file command, if we 
+    append a '-p' flag to the end, git prints the content of 
+    the object based on it's type: git cat-file -p object-hash
+</h3>
+<h3>
+    So yes after inputting: git cat-file -p ce013625030ba8dba906f756967f9e9ca394464a
+the string 'hello' is printed inside of git bash
+</h3>
+<h3>
+    So let's create a dog.txt file, then input: git hash-object dog.txt 
+    git returns our 40 hexadecimal hash, we didn't use -w yet so, 
+    it will just display what it will end up as, but if we edit 
+    the dogs.txt, like add two more dogs, git detects this, and the 
+    hash changes, but lets store it now, so we'll run 
+    the same command with -w: git hash-object dogs.txt -w, so now 
+    this version of dogs.txt is store with our two extra dogs
+</h3>
+<h3>
+    Now let's change the file again, add two more dogs, now there's 
+    four dogs, and if we type git hash-object dogs.txt, we get a 
+    new hash! Everytime we change our file, add things, alter things 
+    in any way, the hash will change, but let's store this one too using 
+    the -w flag, now we have two stored one dogs.txt file with two 
+    dogs inside, and one dogs.txt file with four dogs inside
+</h3>
+
+<h3>
+    So let's use the git cat-file -p 39e27511, it will display our 
+    first two dogs, then if we enter git cat-file -p fd9150c2, it 
+    will display the four dogs in that version of dogs.txt, and 
+    I should mention those shortened hashes we passed in above 
+    after our '-p' flag, git recognizes the full hash based on 
+    the first 8 or so digits, but if we wanted to be complete, 
+    we could've copy/pasted the entire commit hash
+
+</h3>
+<h3>
+    We can also insert versions of our dogs.txt file with the following 
+    command, let's say we only have two dogs currently, we can insert 
+    the other two dogs from the second version of our file 
+    with this command: git cat-file -p fd9150c2 > dogs.txt, we 
+    use the '>' plus the file name.
+</h3>
+<h3>
+    Remember we haven't committed anything, this data is stored in 
+    things called 'blobs'
+</h3>
+<h2>
+    Deep dive into Git Objects: BLOBS
+</h2>
+<h3>
+    Git blobs, blob stands for 'Binary large object', are the 
+    object the type Git uses to store the contents of files in a 
+    given repository, blobs don't include the file names, they only 
+      store the contents of a file
+</h3>
+<h3>
+    So in our last example when we stored the dogs.txt versions, 
+    those are blobs
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
