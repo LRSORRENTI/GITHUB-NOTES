@@ -3964,9 +3964,23 @@ We can delete tags using the command: git tag -d tagname
     contains one file for each tag in the repo
 </h3>
 
-
-
-
+<h2>
+    Inside Git: The HEAD file
+</h2>
+<h3>
+    HEAD typically references a branch pointer, but remember
+    we can also go into 'detached HEAD' to checkout 
+    earlier commits
+</h3>
+<h3>
+    If we're on the main branch the HEAD file contains the ref:
+    ref: refs/heads/main, or if we're in our note-taking branch, 
+    it displays: ref: refs/heads/note-taking
+</h3>
+<h3>
+    Also remember when we use git checkout, HEAD now references 
+    that specific commit, main is still pointing at the tip
+</h3>
 
 
 
