@@ -4218,10 +4218,48 @@ the string 'hello' is printed inside of git bash
     those are blobs
 </h3>
 
+<h3>
+    Every hash from the previous exercise is a BLOB, this leads 
+    us into our next section TREES
+</h3>
+<h2>
+Deep dive into Git Objects: TREES
+</h2>
+<h3>
+    Trees are a git objects used to store the content of 
+    a directory, each tree contains pointers that can refer to 
+    blobs and other trees. Each entry in a tree contains the SHA-1 
+    hash of a blob or tree, as well as the mode, type, and filename
+</h3>
+<h3>
+    So BLOBS store the contents of a file, but TREES store the 
+    content of a directory which include BLOBS and other TREES, 
+    TREES contain pointers to other blobs and trees
+</h3>
+<h3>
+    So we can have a TREE, this TREE has two BLOBS (our index.html, and 
+    main.js files), and a TREE (Styles), that it points to, the Styles tree points 
+    to two BLOBS (Body style body{}) and (navbar style navbar{})
+    
+</h3>
+<h3>
+    We're not going to create any new TREES right now but we can 
+    view TREES with the command: git cat-file -p main^{tree}
+</h3>
+<h3>
+    Remember, git cat-file -p prints the git objects, but if we add 
+    the main^{tree} to the end, this will give us the most recent tree 
 
+</h3>
 
+<h3>
+    $ git cat-file -p note-taking^{tree}
+100644 blob 2b4eb0287622d89edb9535d322422dba3d38d416    README.md
+100644 blob 1440d71259518f525f2299cf4cfda33c53af77ca    index.html
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391    script.js
+100644 blob 01f2952e2ffe695935273e314b539670dd664c9a    style.css
 
-
+</h3>
 
 
 
