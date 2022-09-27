@@ -3922,9 +3922,47 @@ We can delete tags using the command: git tag -d tagname
     Working with the local config file
 </h2>
 <h3>
-    
+    We can change  things in our  config file at a 
+    local level, we've seen how we can change settings in 
+    our global config, like changing name and email 
+    across all repos, but the local git config file 
+    can be changed on a per-repo basis
 </h3>
-
+<h3>
+    This is also where we can add git aliases, we'll go more 
+    in depth on that in a bit.
+</h3>
+    <h3>
+    Remember we can change our username if we cd into our .git,
+    folder with the: git config user.name command, but 
+    we can configure it locally with this command:
+    git config --local user.name "Local Luke",
+    so that local repo has it's username changed from 
+    Luke Sorrenti to Local Luke, we can do the same thing with 
+    email
+</h3>
+<h3>
+    There are hundreds of possible settings, the official 
+    git documentation has a lot of different configuration 
+    settings, we could seriously customize our settings
+</h3>
+<h2>
+    Inside Git: The Refs Folder
+</h2>
+<h3>
+    This is where you'll find a HEADS directory, refs/heads contains
+    one file per branch in a repository, each file is named after 
+    a branch and contains the hash of the commit at the tip 
+    of the branch
+</h3>
+<h3>
+    For example: refs/heads/master contains the commit hash 
+    of the last commit made on the master branch
+</h3>
+<h3>
+    Refs also contains a refs/tags folder which 
+    contains one file for each tag in the repo
+</h3>
 
 
 
