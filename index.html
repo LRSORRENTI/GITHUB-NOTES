@@ -4383,16 +4383,120 @@ added intro to git objects: commits
     </ul>
 </h3>
 
+<h3>
+    Okay so colt just used the command: ls -a , then cd .git/logs, 
+    then code HEAD, and a huge file full of logs that git stored
+    popped up in VSCODE, as an example if we leave that HEAD file 
+    open in VSCODE, then switch to another branch in the terminal, 
+    our HEAD file in VSCODE auto-updates logging the switch we 
+    just made
+</h3>
+<h3>
+    Git tracks our moves, or it tracks the HEAD rather, and git 
+    keeps logs for us. It keeps track of the tip of EVERY branch,
+    even remote branches, git tracks them... git is watching me 
+    O.o..
+</h3>
+
+<h2>
+    The limitations of REFLOGS
+</h2>
+
+<h3>
+    Git only keeps reflogs on your local activity, 
+    they are not shared with collaborators, and they 
+    also expire, Git cleans out old entries after 90 days, 
+    though this can be configured
+</h3>
+<h2>
+    The 'git reflog show' command, the git reflog command 
+    accepts the sub-commands:
+    <h3>
+    <ul>
+        <li>
+            git reflog show 
+        </li>
+        <li>
+            git reflog expire
+        </li>
+        <li>
+            git reflog delete
+        </li>
+        <li>
+            git reflog exists
+        </li>
+    </ul>
+    For example, if we want to view the logs for the 
+    tip of the main branch, we enter: git reflog show main
+    </h3>
+</h2>
+<h3>
+    The show command is the important one, it's the main command 
+    that's used, the others are more specific and not used very 
+    often
+</h3>
+
+<h3>
+    After entering git reflog show HEAD, git displays:
+    $ git reflog show HEAD
+b02a974 (HEAD -> note-taking, origin/note-taking) HEAD@{0}: checkout: moving from main to note-taking
+4d6e557 (origin/main, main) HEAD@{1}: checkout: moving from note-taking to main
+b02a974 (HEAD -> note-taking, origin/note-taking) HEAD@{2}: commit: added intro to git reflogs
+aa88ef5 HEAD@{3}: commit: finished section on: git behind the scenes
+095aa11 HEAD@{4}: commit: added intro to git objects: commits
+aae2db5 HEAD@{5}: commit: finished section on GIT TREES, added intro to git objects (git commits)
+51847aa HEAD@{6}: checkout: moving from main to note-taking
+4d6e557 (origin/main, main) HEAD@{7}: checkout: moving from note-taking to main
+51847aa HEAD@{8}: commit: added intro to viewing TREES with the syntax git cat-file -p main^{tree} or it would be branchname^{tree} like for this repo note-taking^{tree}
+d262b5a HEAD@{9}: commit: added info on git cat-file -p object-hash, and how it displays the contents of that with the -p flag, also added intro to BLOBS
+403dd85 HEAD@{10}: commit: added more info on git hash-object command, following colt's exercise
+eb2c325 HEAD@{11}: commit: added info on cryptographic hashing functions like SHA-1 and ECDSA
+ac2098a HEAD@{12}: commit: added info on the git objects folder
+cfd964c HEAD@{13}: commit: added info on the HEAD file
+6317c5d HEAD@{14}: commit: added notes
+</h3>
+<h3>
+    The main takeaway here is that when we use git reflog VS. git log --oneline, 
+    reflog shows everything, it shows all changes made with HEAD, 
+    git log --oneline displays a clear history from one 
+    commit to it's parent, it doesn't display things that were 
+    rebased, lost, deleted etc.. git reflog does show those
+</h3>
+<h3>
+    And know that the above output like:
+    aa88ef5 HEAD@{3}: commit: finished section on: git behind the scenes
+    the '@{3}' is showing the current value stored at {3}, but 
+    if we switch branches or change something, that specific commit 
+    value becomes {4}, since we now have a new reflog instance occupying 
+    the HEAD@{0} position, the {num} displays the current list, but 
+    those numbers dynamically change all the time when branches are 
+    switched to or things are changed in anyway
+</h3>
+<h3>
+    We could also pass in other branches to reflog, instead of 
+    git reflog show HEAD, if we enter git reflog show note-taking,
+    this is displayed:
+</h3>
+<h3>
+    $ git reflog show note-taking
+b02a974 (HEAD -> note-taking, origin/note-taking) note-taking@{0}: commit: added intro to git reflogs
+aa88ef5 note-taking@{1}: commit: finished section on: git behind the scenes
+095aa11 note-taking@{2}: commit: added intro to git objects: commits
+aae2db5 note-taking@{3}: commit: finished section on GIT TREES, added intro to git objects (git commits)
+51847aa note-taking@{4}: commit: added intro to viewing TREES with the syntax git cat-file -p main^{tree} or it would be branchname^{tree} like for this repo note-taking^{tree}
+d262b5a note-taking@{5}: commit: added info on git cat-file -p object-hash, and how it displays the contents of that with the -p flag, also added intro to BLOBS
+403dd85 note-taking@{6}: commit: added more info on git hash-object command, following colt's exercise
+eb2c325 note-taking@{7}: commit: added info on cryptographic hashing functions like SHA-1 and ECDSA
+ac2098a note-taking@{8}: commit: added info on the git objects folder
+cfd964c note-taking@{9}: commit: added info on the HEAD file
+6317c5d note-taking@{10}: commit: added notes
+8edb8d7 note-taking@{11}: commit: added bullet points to hashing/objects section
+9aa8476 note-taking@{12}: commit: added info on pushing/replacing/deleting tags
+850f2b4 note-taking@{13}: commit: added info on how to append messages to our tags, and how we view tag messages with the git show tagname command
+6254200 note-taking@{14}: commit: added info on searching for specific tag names
 
 
-
-
-
-
-
-
-
-
+</h3>
 
 
 
