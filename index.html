@@ -4306,6 +4306,107 @@ added intro to git objects: commits
     above, gitbash will display: commit, but if it was a tree, the 
     '-t' flag would display: tree
     </h3>
+<h2>
+    The power of "REFLOGS", retrieving "lost" work
+</h2>
+<h3>
+    The reason the REFLOG command is used is when we've messed 
+    something up, when we've lost a commit, or rebased when 
+    we shouldn't have, or if we want to undo something that 
+    seems undo-able, often we can fix things with REFLOG, 
+    REFLOG may be something you'll only need to google in a time 
+    of need
+</h3>
+<h3>
+    Important:
+    <ul>
+        <li>
+            Exploring REFLOG files
+        </li>
+        <li>
+            The git reflog command
+        </li>
+        <li>
+            Rescuing lost commits with reflog
+        </li>
+        <li>
+            Undoing rebases with reflog
+        </li>
+    </ul>
+    Nice to have:
+    <ul>
+        <li>
+            Time-based reflog qualifiers
+        </li>
+    </ul>
+</h3>
+<h2>
+    Introducing REFLOGS
+</h2>
+<h3>
+    The term reflog is short for 'reference logs', they're 
+    essentially a transcript or receipt that git keeps for us, 
+    whenever references are updated, git keeps a record of when the 
+    tips of branches and other references were updated in 
+    the repo, and we can view and update these reference logs 
+    using the git reflog command
+</h3>
+<h3>
+    References in git are also commonly referred to as 
+    pointers, are things like bramch references, every 
+    branch in our repo has a branch reference, like main branch 
+    pointer points to main, feature branch pointer points to 
+    feature, and the HEAD pointer can reference a branch or a 
+    commit in detached HEAD
+</h3>
+
+<h3>
+    There are others as well, like for remote branches, fetch HEAD,
+    merge HEAD, there are different references in git
+</h3>
+<h3>
+    If we look at HEAD as an example, HEAD could have a reflog that 
+    looks like:
+    <ul>
+        <li>
+            - Commit G - New commit
+        </li>
+        <li>
+            - Commit H - New commit
+        </li>
+        <li>
+            - Commit D -Switch to main from feature
+        </li>
+        <li>
+            - Commit H - Switched to feature from main
+        </li>
+    </ul>
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
