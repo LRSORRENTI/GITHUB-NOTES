@@ -4632,10 +4632,36 @@ f36f957 HEAD@{Sat Sep 24 18:04:51 2022 -0500}: checkout: moving from note-taking
     Undoing a rebase with REFLOG - It's a miracle!
 </h2>
 
+<h3>
+    Let's say we have our main branch, then we create a new 
+    branch: git switch -c Flowers, let's say we're working 
+    on a flowers feature branch, we can add and commit our 
+    flowers.txt file, or initial commit, we add some flowers:
+    salmon zinnias, queen lime zinnias, then commit those changes,
+    then we add more: dahlias, commit dahlias, add more: 
+    coral amaranth, commit again, then one last flower: celosia, 
+    add/commit again.
+</h3>
+<h3>
+    So now we'll do an interactive rebase in VSCODE, so 
+    let's enter: git rebase -i HEAD~4, so VSCODE opens and we can 
+    now change our commits, we change 'pick c47ecfc add celosia', 
+    to 'fixup c47ecfc add celosia', what we'll see is that the 
+    content of the commit doesn't go away, just the commit hash
+ 
+</h3>
 
+<h3>
+    So now if we want we can use git reflog, and we'll see that commit 
+    we  used 'fixup' on, we can copy the commit hash we deleted
+    in our interactive rebase, and enter git reset --hard deletedcommithash 
+    and our content is now back
 
-
-
+</h3>
+<h3>
+    The main takeaway is that using the power of REFLOGS, we can 
+    save or undo changes that seem impossible
+</h3>
 
 
 
