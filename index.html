@@ -4735,17 +4735,68 @@ f36f957 HEAD@{Sat Sep 24 18:04:51 2022 -0500}: checkout: moving from note-taking
 </h3>
 <h3>
     We can open that gitconfig folder and edit it in VSCODE with 
-    the command: code ~/.gitconfig
+    the command: code ~/.gitconfig, if we wanted to change 
+    our settings in VSCODE instead of the command line
 </h3>
 
+<h2>
+    Writing our first alias
+</h2>
+<h3>
+    We can easily set up git aliases to make things simpler 
+    and faster, for example, we could define an alias 'git ci' 
+    instead of having to write git commit, or we can define a 
+    custom alias that will print a custom, formmatted git log with 
+    an alias like 'git lg' 
+</h3>
 
+<h3>
+    We can set this up in our gitconfig file in VSCODE 
+    by adding: [alias] s = status,
+    after saving, everytime we type 'git s' the status log 
+    will display, we created a shortcut, an alias
+</h3>
 
+<h3>
+    We could also do this in the command line itself with the 
+    command: git config --global alias.s status, the same 
+    thing will be achieved as above where we configured our 
+    's' alias to display status as a shortcut, 'git s' is the 
+    same as 'git status'
+</h3>
 
-
-
-
-
-
+<h2>
+    Aliases with arguments
+</h2>
+<h3>
+    For example, we could set 'git add' to be 'git a', followed by 
+    two arguments. [alias] a = add file1 file2 file3, so we could 
+    do 'git a README.md index.html'
+</h3>
+<h3>
+    Aliases are automatically passed through after you call it
+</h3>
+<h2>
+    Exploring existing and useful git aliases online
+</h2>
+<h3>
+    There are tons of custom git aliases we can search for 
+    and use, pre-built aliases we can copy paste into our 
+    command line, aliases that can update the display of git log, 
+    aliases that make it easier to list all user configurations,
+    $ git config --global alias.gl 'config --global -l', now 'git gl'
+    displays all defined aliases and other configuration options
+</h3>
+<h3>
+Also added [alias]
+ll = log --oneline
+Which shortens git log --oneline
+</h3>
+<h2>
+    That's it for the course, going to clean all this up, 
+    and set these notes up in such a way that I can 
+    easily navigate between sections
+</h2>
 
 
 
