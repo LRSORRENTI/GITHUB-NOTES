@@ -4601,9 +4601,36 @@ f36f957 HEAD@{Sat Sep 24 18:04:51 2022 -0500}: checkout: moving from note-taking
     to one week ago, could be 7 days, 2 hours , 5 minutes ago
 </h3>
 
-
-
-
+<h2>
+    Rescuing lost commits with REFLOG
+</h2>
+<h3>
+    We can use reflog to access commits that seem lost or are 
+    not appearing in git log
+</h3>
+<h3>
+    Let's say we have a new repo, and we add a file called 
+    veggies.txt, we commit a few times, first commit we have
+    brocolli, kale, chard, second commit we have cabbage and arugula 
+    added, then we commit once more adding carrots, and pumpkins,
+    squash, then we decide we want to remove a certain commit, 
+    remember we can use git log to see our commit hashes, 
+    then we enter: git reset --hard commithash, to undo the 
+    changes, so now  carrots, pumpkins, and squash are gone,
+    then if we want those veggies back, how do we get them?
+</h3>
+<h3>
+    That info is still available in the REFLOG, so let's enter:
+    git reflog show main, we can see the commit hash that 
+    wasn't showing in: git log --oneline, we could do 
+    git checkout refloghash, it will put us in detached HEAD, but 
+    let's say we want to undo that hard reset we did, we can
+    enter: git reset --hard main@{1} or whatever missing commithash, 
+    now carrots, pumpkins, and squash are back!
+</h3>
+<h2>
+    Undoing a rebase with REFLOG - It's a miracle!
+</h2>
 
 
 
