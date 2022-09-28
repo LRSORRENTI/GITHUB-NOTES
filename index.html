@@ -4276,8 +4276,36 @@ Deep dive into Git Objects: TREES
     commit(s), the author, the commiter, and the commit message 
     itself
 </h3>
+<h3>
+    So when we run 'git commit', git creates this new commit object 
+    for us, and it sets the parent to be the current HEAD commit, and 
+    whose tree is the current content of the index. So there's an 
+    actual index file, and when we run git commit, the commit tree will 
+    reflect the contents of that index file
+</h3>
+<h3>
+    So every commit contains a reference to a tree, if 
+    we type the command: git cat-file -p commithash, so like 
+    git cat-file -p 095aa11, then hit enter the following is 
+    displayed:
+</h3>
+<h3>
+    $ git cat-file -p 095aa11
+tree 76bc86554f0233b71c414bd40cb9dc37743a83a7
+parent aae2db5a0ed65265440b31f742a903c0d37ba415
+author Luke Sorrenti <lrsorrenti@hotmail.com> 1664369148 -0500
+committer Luke Sorrenti <lrsorrenti@hotmail.com> 1664369148 -0500
 
+added intro to git objects: commits
 
+</h3>
+<h3>
+    And we can also verify the above's type if we type:
+    git cat-file -t, the '-t' is short for type, so we're asking 
+    git to display the type, if we enter git cat-file -t 095aa11, from 
+    above, gitbash will display: commit, but if it was a tree, the 
+    '-t' flag would display: tree
+    </h3>
 
 
 
