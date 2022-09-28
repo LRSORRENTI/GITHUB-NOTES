@@ -4662,16 +4662,81 @@ f36f957 HEAD@{Sat Sep 24 18:04:51 2022 -0500}: checkout: moving from note-taking
     The main takeaway is that using the power of REFLOGS, we can 
     save or undo changes that seem impossible
 </h3>
+<h2>
+    Writing custom git aliases
+</h2>
+<h3>
+    There's two things we'll go over:
+    <ul>
+        <li>
+            How we write custom aliases.
+        </li>
+        <li>
+            The global config file (ie where we store them)
+        </li>
+    </ul>
+    Some folks love using aliases since they're like 
+    shortcuts, custom commands you can write, so you 
+    don't need to type out full lengthy git commands
+</h3>
 
+<h3>
+    But before we dive in to writing git aliases, let's quickly 
+    go over the global config file. Git looks for the global config 
+    file at either ~/.gitconfig or ~/.config/git/config
+</h3>
+<h3>
+    Any configuration variables we change in that file will 
+    also be applied across all of our Git repos, but we 
+    can also alter configuration variables from the command 
+    line if preferred
+</h3>
+<h3>
+    We talked a little bit about the config file, 
+    when we used the 'ls .git' command, and the wide array 
+    of files and folders popped up, including that 'objects' 
+    folder from our:  Inside Git: The OBJECTS Folder, the 
+    section where we took a look at how git is set up behind 
+    the scenes
+</h3>
+<h3>
+    But we can also set the global git config, and there's 
+    actually one level above that called 'system-wide git config file'
+    so if you had a few different users all using the same machine,
+    you could set the system-wide git config file so all the 
+    users config files were pre-set
+</h3>
+<h3>
+    But if we just use one account per machine, the global 
+    config file works just fine, remember at the beginning of 
+    the course we used the command: git config --global user.name, 
+    and user.email
+</h3>
 
+<h3>
+    But we can also do this by opening the hidden global 
+    git config file, we can print it out with:
+    cat ~/.gitconfig
+</h3>
 
+<h3>
+    $ cat ~/.gitconfig
+[filter "lfs"]
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+        clean = git-lfs clean -- %f
+[user]
+        name = Luke Sorrenti
+        email = lrsorrenti@hotmail.com
+[core]
+        editor = code --wait
 
-
-
-
-
-
-
+</h3>
+<h3>
+    We can open that gitconfig folder and edit it in VSCODE with 
+    the command: code ~/.gitconfig
+</h3>
 
 
 
